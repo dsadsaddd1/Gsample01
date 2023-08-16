@@ -17,4 +17,12 @@ public class MainController {
 		
 		return ResponseEntity.ok(map);
 	}
+	
+	@GetMapping("/health")
+	public ResponseEntity<?> health(){
+		Map<String, Object> map = new HashMap<>();
+		map.put("status", "ok");
+		
+		return ResponseEntity.ok(map);
+	}
 }
